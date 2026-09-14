@@ -189,7 +189,59 @@ jobs:
         env:
           INCLUDE_DOCKER: ${{ inputs.include_docker }}
         run: |
+          set -e
           bash ./build25.sh "${{ inputs.profile }}"
+
+      - name: 🔍 检查生成的固件
+        run: |
+          echo "===== 当前工作目录 ====="
+          pwd
+
+          echo "===== ImageBuilder 输出目录 ====="
+          ls -lah imagebuilder/bin/targets/qualcommbe/ipq95xx/ || true
+
+          echo "===== 所有生成文件 ====="
+          find imagebuilder/bin/targets/qualcommbe/ipq95xx/ \
+            -type f \
+            -print 2>/dev/null || true
+
+          echo "===== 固件文件 ====="
+          find imagebuilder/bin/targets/qualcommbe/ipq95xx/ \
+            -type f \
+            \( \
+              -name '*squashfs-sysupgrade.*' \
+              -o -name '*squashfs-factory.*' \
+              -o -name '*uImage.*' \
+            \) \
+            -print 2>/dev/null || true
+
+      - name: 📦 整理 Release 固件
+        run: |
+          set -e
+
+          rm -rf release
+          mkdir -p release
+
+          find imagebuilder/bin/targets/qualcommbe/ipq95xx/ \
+            -type f \
+            \( \
+              -name '*squashfs-sysupgrade.*' \
+              -o -name '*squashfs-factory.*' \
+              -o -name '*uImage.*' \
+            \) \
+            -exec cp -v {} release/ \;
+
+          echo "===== Release 文件 ====="
+          ls -lah release
+
+          COUNT=$(find release -type f | wc -l)
+
+          if [ "$COUNT" -eq 0 ]; then
+            echo "❌ 没有生成任何固件，停止 Release。"
+            exit 1
+          fi
+
+          echo "✅ 共找到 $COUNT 个固件文件"
 
       - name: 📅 获取当前日期
         id: date
@@ -198,14 +250,19 @@ jobs:
 
       - name: 📜 生成发布说明
         run: |
-          cat > ${{ github.workspace }}/router-info.md <<EOF
+          cat > "${{ github.workspace }}/router-info.md" <<EOF
           ## 📡 路由器后台信息
+
           📌 版本： ${{ env.FINAL_WRT }}-${{ env.FINAL_LUCI_VER }}
           🏠 后台地址： ${{ inputs.ipaddr }}
           👤 用户名： root
           🔑 密码： 无
           📶 WiFi密码： 12345678
           🐳 Docker状态： ${{ inputs.include_docker == 'yes' && '已集成' || '未集成' }}
+
+          ### 📦 固件 Profile
+
+          ${{ inputs.profile }}
           EOF
 
       - name: 🚀 上传到 ${{ inputs.wrt_version }} Release
@@ -214,6 +271,5 @@ jobs:
           tag_name: ${{ steps.date.outputs.date }}-${{ env.FINAL_WRT }}-${{ env.FINAL_LUCI_VER }}-qualcommbe-ipq95xx-RELEASE-Docker-${{ inputs.include_docker }}
           body_path: ${{ github.workspace }}/router-info.md
           files: |
-            imagebuilder/bin/targets/qualcommbe/ipq95xx/*squashfs-sysupgrade.*
-            imagebuilder/bin/targets/qualcommbe/ipq95xx/*squashfs-factory.*
+            release/*
           token: ${{ secrets.GITHUB_TOKEN }}
