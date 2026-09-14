@@ -65,10 +65,9 @@ if [ "$PROFILE" = "askey_sbe1v1k" ]; then
     PACKAGES="$PACKAGES ipq-wifi-askey_sbe1v1k"
 fi
 
-# [编译 Qualcomm RDP433单独插件]
+# [编译 Qualcomm RDP433 单独插件]
 if [ "$PROFILE" = "qcom_rdp433" ]; then
-    echo "🐳 Install Qualcomm RDP433 extra packages"
-    PACKAGES="$PACKAGES ipq-wifi-qcom_rdp433"
+    echo "🐳 Qualcomm RDP433 uses target-default Wi-Fi configuration"
 fi
 
 # ============================================
