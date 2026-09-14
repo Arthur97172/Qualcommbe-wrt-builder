@@ -41,7 +41,6 @@ PACKAGES="$PACKAGES ath12k-firmware-qcn9274"
 #[其它驱动]
 PACKAGES="$PACKAGES kmod-sfp kmod-phy-maxlinear kmod-phy-realtek rtl826x-firmware"
 PACKAGES="$PACKAGES kmod-phylink ethtool iperf3 kmod-thermal lm-sensors kmod-tcp-bbr"
-PACKAGES="$PACKAGES qca-nss-fw-eip"
 
 # [Web 界面]
 PACKAGES="$PACKAGES luci luci-base luci-i18n-base-zh-cn luci-mod-admin-full luci-i18n-firewall-zh-cn"
