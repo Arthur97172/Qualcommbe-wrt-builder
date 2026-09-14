@@ -36,7 +36,7 @@ PACKAGES="$PACKAGES -libustream-mbedtls -libustream-wolfssl libustream-openssl"
 # [无线驱动]
 PACKAGES="$PACKAGES kmod-cfg80211 kmod-mac80211 wireless-regdb"
 PACKAGES="$PACKAGES kmod-ath12k"
-PACKAGES="$PACKAGES ath12k-firmware-ipq9574 ath12k-firmware-qcn9274"
+PACKAGES="$PACKAGES ath12k-firmware-qcn9274"
 
 #[其它驱动]
 PACKAGES="$PACKAGES kmod-sfp kmod-phy-maxlinear kmod-phy-realtek rtl826x-firmware"
