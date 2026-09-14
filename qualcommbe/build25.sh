@@ -53,6 +53,24 @@ PACKAGES="$PACKAGES luci-app-package-manager luci-i18n-package-manager-zh-cn"
 PACKAGES="$PACKAGES luci-app-irqbalance luci-i18n-irqbalance-zh-cn"
 PACKAGES="$PACKAGES luci-app-wifihistory luci-i18n-wifihistory-zh-cn"
 
+# [编译 8devices Kiwi-DVK单独插件]
+if [ "$PROFILE" = "8devices_kiwi-dvk" ]; then
+    echo "🐳 Install 8devices Kiwi-DVK extra packages"
+    PACKAGES="$PACKAGES ipq-wifi-8devices_kiwi"
+fi
+
+# [编译 Askey SBE1V1K单独插件]
+if [ "$PROFILE" = "askey_sbe1v1k" ]; then
+    echo "🐳 Install Askey SBE1V1K extra packages"
+    PACKAGES="$PACKAGES ipq-wifi-askey_sbe1v1k"
+fi
+
+# [编译 Qualcomm RDP433单独插件]
+if [ "$PROFILE" = "qcom_rdp433" ]; then
+    echo "🐳 Install Qualcomm RDP433 extra packages"
+    PACKAGES="$PACKAGES ipq-wifi-qcom_rdp433"
+fi
+
 # ============================================
 # 步骤2: 处理第三方插件(最佳努力,失败不阻断构建)
 # ============================================
