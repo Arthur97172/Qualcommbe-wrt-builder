@@ -78,8 +78,8 @@ if [ "$THIRD_PARTY_OK" = "1" ]; then
     echo "复制第三方 APK 到 thirdparty/ 目录..."
     mkdir -p apk-merged thirdparty
 
-    if [ -d /tmp/store-repo/apk/aarch64_generic ]; then
-        find /tmp/store-repo/apk/aarch64_generic -name '*.apk' -exec cp -t apk-merged {} + 2>/dev/null || true
+    if [ -d /tmp/store-repo/apk/aarch64_cortex-a53 ]; then
+        find /tmp/store-repo/apk/aarch64_cortex-a53 -name '*.apk' -exec cp -t apk-merged {} + 2>/dev/null || true
     fi
    
     if [ -d apk-merged ] && [ -n "$(ls apk-merged/*.apk 2>/dev/null)" ]; then
