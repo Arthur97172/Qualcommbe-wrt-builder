@@ -5,10 +5,10 @@
 </p>
   <h1>基于ImmortalWrt and Openwrt Airoha-an7581</h1>
 
-  <img src="https://img.shields.io/github/downloads/Arthur97172/Airoha-wrt-builder/total.svg?style=for-the-badge&color=32C955"/>
-  <img src="https://img.shields.io/github/stars/Arthur97172/Airoha-wrt-builder.svg?style=for-the-badge&color=orange"/>
-  <img src="https://img.shields.io/github/forks/Arthur97172/Airoha-wrt-builder.svg?style=for-the-badge&color=ff69b4"/>
-  <img src="https://img.shields.io/github/license/Arthur97172/Airoha-wrt-builder.svg?style=for-the-badge&color=blueviolet"/>
+  <img src="https://img.shields.io/github/downloads/Arthur97172/qualcommbe-wrt-builder/total.svg?style=for-the-badge&color=32C955"/>
+  <img src="https://img.shields.io/github/stars/Arthur97172/qualcommbe-wrt-builder.svg?style=for-the-badge&color=orange"/>
+  <img src="https://img.shields.io/github/forks/Arthur97172/qualcommbe-wrt-builder.svg?style=for-the-badge&color=ff69b4"/>
+  <img src="https://img.shields.io/github/license/Arthur97172/qualcommbe-wrt-builder.svg?style=for-the-badge&color=blueviolet"/>
 
   [![](https://img.shields.io/badge/-目录:-696969.svg)](#readme)
   [![](https://img.shields.io/badge/-项目介绍-FFFFFF.svg)](#-项目介绍-)
@@ -29,9 +29,9 @@
 ## 😊 支持设备 [![](https://img.shields.io/badge/-支持设备-FFFFFF.svg)](#-支持设备-)
 | 品牌     | 设备型号 |
 |----------|------|
-| Airoha    | airoha_an7581-evb, airoha_an7581-evb-emmc-eagle,  airoha_an7581-evb-emmc-kite |
-| Gemtek   | gemtek_w1700k-ubi |
-| Nokia   | nokia_valyrian, nokia_xg-040g-md, nokia_xg-040g-md-ubi |
+| 8devices    | 8devices_kiwi-dvk |
+| Askey   | askey_sbe1v1k |
+| Qualcomm   | qcom_rdp433 |
 
 ## 😅 第三方插件 [![](https://img.shields.io/badge/-第三方插件-FFFFFF.svg)](#-第三方插件-)
 <div align="left">
@@ -61,7 +61,6 @@
 
 ## 🎉 Thanks [![](https://img.shields.io/badge/-Thanks-FFFFFF.svg)](#-Thanks-)
 - [OpenWrt](https://github.com/Openwrt)
-- [ImmortalWrt](https://github.com/immortalwrt)
 
 ## 🙏 免责声明 [![](https://img.shields.io/badge/-免责声明-FFFFFF.svg)](#-免责声明-)
 - 📚 本固件仅供学习研究，严禁用于任何商业用途
