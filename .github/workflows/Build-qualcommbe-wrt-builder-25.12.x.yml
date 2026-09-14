@@ -259,10 +259,6 @@ jobs:
           🔑 密码： 无
           📶 WiFi密码： 12345678
           🐳 Docker状态： ${{ inputs.include_docker == 'yes' && '已集成' || '未集成' }}
-
-          ### 📦 固件 Profile
-
-          ${{ inputs.profile }}
           EOF
 
       - name: 🚀 上传到 ${{ inputs.wrt_version }} Release
