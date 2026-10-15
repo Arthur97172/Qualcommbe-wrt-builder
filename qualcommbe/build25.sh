@@ -33,6 +33,7 @@ PACKAGES="$PACKAGES -odhcpd odhcpd-ipv6only odhcp6c"
 PACKAGES="$PACKAGES -wpad-basic-mbedtls -wpad-mbedtls -wpad-openssl wpad-mesh-openssl"
 PACKAGES="$PACKAGES -libustream-mbedtls -libustream-wolfssl libustream-openssl"
 PACKAGES="$PACKAGES tmux"
+PACKAGES="$PACKAGES block-mount"
 
 # [无线驱动]
 PACKAGES="$PACKAGES kmod-cfg80211 kmod-mac80211 wireless-regdb"
