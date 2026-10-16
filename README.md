@@ -3,7 +3,7 @@
   <img src="files/screenshot/001.png" style="max-width: 100%; height: auto;" />
   <img src="./files/screenshot/banner.svg" style="max-width: 100%; height: auto;" />
 </p>
-  <h1>基于ImmortalWrt and Openwrt Airoha-an7581</h1>
+  <h1>基于ImmortalWrt and Openwrt Qualcommbe-ipq95xx</h1>
 
   <img src="https://img.shields.io/github/downloads/Arthur97172/qualcommbe-wrt-builder/total.svg?style=for-the-badge&color=32C955"/>
   <img src="https://img.shields.io/github/stars/Arthur97172/qualcommbe-wrt-builder.svg?style=for-the-badge&color=orange"/>
