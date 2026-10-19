@@ -2,21 +2,6 @@
 # 25.12.x 第三方插件配置 (APK 格式) - aarch64_cortex-a53 专用
 # 启用第三方插件时取消对应注释
 
-#动态DNS
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES ddns-scripts-cloudflare luci-app-ddns luci-i18n-ddns-zh-cn"
-
-#samb文件共享
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-samba4 luci-i18n-samba4-zh-cn"
-
-#timecontrol上网时间控制
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-timecontrol luci-i18n-timecontrol-zh-cn"
-
-#watchdog看门狗
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES watchdog luci-app-watchdog luci-i18n-watchdog-zh-cn"
-
-#wireguard VPN控制面板
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-proto-wireguard qrencode"
-
 # adguardhome广告拦截 (adguardhome)
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES adguardhome luci-app-adguardhome luci-i18n-adguardhome-zh-cn"
 
@@ -38,8 +23,17 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES bandix-plus luci-app-bandix-plus luci-i18n-ban
 # clashoo代理面板 (clashoo)
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES clashoo luci-app-clashoo luci-i18n-clashoo-zh-cn"
 
+# CPU状态 (cpustatus)
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-cpu-status"
+
 # daede代理面板 (daede)
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES dae daed luci-app-daede"
+
+#动态DNS
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES ddns-scripts-cloudflare luci-app-ddns luci-i18n-ddns-zh-cn"
+
+# easymesh无线组网(Easymesh)
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-easymesh luci-i18n-easymesh-zh-cn"
 
 # lucky内网穿透 (lucky)
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES lucky luci-app-lucky luci-i18n-lucky-zh-cn"
@@ -81,8 +75,17 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-poweroffdevice luci-i18n-poweroffdevi
 # turboacc网络加速(turboacc)
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc luci-i18n-turboacc-zh-cn"
 
-# easymesh无线组网(Easymesh)
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-easymesh luci-i18n-easymesh-zh-cn"
+#samb文件共享
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-samba4 luci-i18n-samba4-zh-cn"
 
 # taskplan定时任务 (taskplan)
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-taskplan luci-i18n-taskplan-zh-cn"
+
+#timecontrol上网时间控制
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-timecontrol luci-i18n-timecontrol-zh-cn"
+
+#watchdog看门狗
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES watchdog luci-app-watchdog luci-i18n-watchdog-zh-cn"
+
+#wireguard VPN控制面板
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-proto-wireguard qrencode"
