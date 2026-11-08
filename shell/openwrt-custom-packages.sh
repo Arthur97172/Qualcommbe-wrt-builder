@@ -23,6 +23,9 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES bandix-plus luci-app-bandix-plus luci-i18n-ban
 # Clashoo代理面板 (clashoo)
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES clashoo luci-app-clashoo luci-i18n-clashoo-zh-cn"
 
+#corestatus状态 (corestatus)
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-corestatus luci-i18n-corestatus-zh-cn"
+
 # Daede代理面板 (daede)
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES dae daed luci-app-daede"
 
@@ -89,6 +92,3 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES watchdog luci-app-watchdog luci-i18n-watchdog-
 
 # Wireguard VPN控制面板 (wireguard)
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-proto-wireguard qrencode"
-
-#XPU状态 (xpustatus)
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-xpu-status luci-i18n-xpu-status-zh-cn"
